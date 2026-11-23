@@ -1,0 +1,82 @@
+---
+title: "STAT 302 Final Project"
+subtitle: "[Repo Link](https://github.com/stat-302-2026-spring/final-project-fmartin1312)"
+author: "Folasade Martin"
+format: 
+  revealjs:
+    transition: slide
+    embed-resources: true
+    slide-number: true
+---
+
+``` {r}
+#| include: false
+
+library(tidyverse)
+```
+
+## Data Source
+
+::: {.callout-note}
+[Link to data source](https://www.kaggle.com/datasets/muqaddasejaz/european-flights-dataset?resource=download)
+:::
+
+
+I will be exploring a dataset, from Kaggle, that shows a detailed record of **air traffic activity across European airports** over a seven-year period (2016 - 2022). It captures Instrument Flight Rules (IFR) movements, including both arrivals and departures, as reported by Network Managers and Airport Operators.
+
+
+## Why This Data
+
+I chose this data set because I wanted to investigate changes in air traffic trends during two distinct periods: the **COVID-19 pandemic** and **Brexit**. I believe that these were the two events in the seven-year period that most affected European traveling habits. I find Brexit particularly interesting because British citizens began needing visas to enter EU countries. I hypothesize that this would have reduced overall departures and arrivals from British airports. 
+
+. . .
+
+*But we will see if that is actually true in this presentation.*
+
+
+# Pandemic Analysis {style="text-align: center;"}
+
+## Pandemic Impact on European Travel 
+
+![](plots/top_5_line.png){#fig-line-graph}
+
+# Brexit Analysis {style="text-align: center;"}
+
+## Brexit's Impact on British Travel Compared to EU Countries {style="font-size: 0.75em;"}
+
+![](plots/uk_bar.png){#fig-bar-graph}
+
+
+## Combined Affects of Brexit & COVID on UK Travel
+![](plots/uk_heatmap.png){#fig-heatmap}
+
+## Additional Information Section
+
+Core concepts and insights from each of my visualizations. 
+
+::: {.fragment}
+::: {.panel-tabset}
+
+## Line Graph
+
+::: {style="font-size: 0.80em;"}
+There was a universal COVID impact across all five countries. In @fig-line-graph, every country shows a sharp drop between 2019 and 2020, which is visually striking and immediately obvious. Denmark was the clear outlier as the busiest country pre-COVID but had the steepest drop and slowest recovery. The fact that no country had returned to pre-2019 levels by 2022 is also a subtle but important finding that implies people were wary to travel after the paranoia from the pandemic.
+:::
+
+## Bar Chart
+
+::: {style="font-size: 0.80em;"}
+@fig-bar-graph reveals that Germany consistently outpaced the UK in average flight departures across all four years, with the most telling finding coming in 2022 where Germany recovered to 119.7 versus the UK's 103.3. Since Germany remained an EU member while the UK did not, this persistent gap in recovery speed is consistent with Brexit creating structural headwinds for UK air travel demand, even as both countries were rebuilding from the same COVID disruption.
+:::
+
+## Heat Map
+
+::: {style="font-size: 0.80em;"}
+@fig-heatmap reveals two overlapping stories simultaneously: the bright yellow summer months in 2016-2019 clearly show strong seasonal demand that the UK consistently enjoyed as an EU member, while the sudden collapse to dark purple from March 2020 captures the COVID crash more dramatically than either of the other charts. Most significantly for the Brexit analysis, the 2021 and 2022 rows never return to the warm orange and yellow tones of the pre-Brexit years, suggesting that even as COVID restrictions lifted, UK flight volume failed to recover to the levels seen when the UK had full EU travel integration, comfirming my hypothesis. 
+:::
+
+:::
+
+:::
+
+# Thank You! {style="text-align: center;"}

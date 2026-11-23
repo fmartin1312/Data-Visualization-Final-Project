@@ -1,0 +1,56 @@
+---
+title: "Data Memo"
+subtitle: |
+  | Final Project 
+  | Data Visualization (STAT 302)
+author: "Folasade Martin"
+pagetitle: "Data Memo Folasade Martin"
+date: today
+
+format:
+  html:
+    toc: true
+    toc-location: left
+    embed-resources: true
+    link-external-newwindow: true
+    fig-dpi: 300
+
+execute:
+  warning: false
+
+from: markdown+emoji 
+reference-location: margin
+citation-location: margin
+---
+
+::: {.callout-tip icon=false}
+
+## Github Repo Link
+
+[Folasade's Repo Link](https://github.com/stat-302-2026-spring/final-project-fmartin1312.git)
+
+:::
+
+
+### Data source
+My data source is from **Kaggle**, and it is a dataset showing a detailed record of air traffic activity across European airports over a seven-year period (2016 - 2022). It captures Instrument Flight Rules (IFR) movements, including both arrivals and departures, as reported by Network Managers and Airport Operators. The dataset has **688,099 observations** and **14 variables**. 
+
+[Link to data source](https://www.kaggle.com/datasets/muqaddasejaz/european-flights-dataset?resource=download)
+
+### Why this data
+
+I chose this data set because, as someone who lives in Europe, London specifically, I wanted to see changes in air traffic trends across two distinct periods: the pandemic and Brexit. I believe that these were the two events in the seven-year period that affected people's traveling habits the most. I find Brexit particularly interesting because the UK Passport was no longer able to be used to enter EU countries, and visas needed to start being used. I hypothesize that this would have reduced overall departures and arrivals from British airports. 
+
+### Visualization plan
+
+Because most of my data will be temporal visualizations, I will be using mainly static graphics to display my information. Also, because I want to present a narrative about how air traffic trends changed overtime, I will be creating a presentation rather than a shiny app. I will most likely combine line graphs, bar and pie charts, and tables throughout my presentation. 
+
+### Initial data issues
+
+I have been able to successfully download and read my data in R. The main issue that I see in my dataset, aside from its large number of observations, is that there are three variables, `flt_dep_ifr_2`, `flt_arr_ifr_2`, `flt_tot_ifr_2` that have high missingness. Each variable has **~480,000 missing observations**, which is more than half of the total observations, which is very worrying. 
+
+After looking at the codebook, it looks like the variables are secondary reports/calculations for IFR departures, arrivals, and total movements, respectively. Because there are not the initial reports/calculations, I believe that I can remove the columns before making any plots as they do not greatly impact any conclusions that I make. Also there is no missingness for any other variables, so removing these columns should not have any significant impact. 
+
+### Misc
+
+For next steps on my project, I will begin my making broad/generic graphs to get an idea of what my data looks like and too see if any of hypotheses about significant periods of time that impacted air travel were correct. If yes, then I will start looking at specific countries, especially the United Kingdom, and see if there are any atypical trends between countries. 
